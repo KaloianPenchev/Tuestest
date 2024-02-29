@@ -1,7 +1,4 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
-<head>
-  <link rel="stylesheet" href="style_home.css">
-</head>    
 <h1 allign="center">Notes</h1>
     <ul class="list-group list-group-flush" id="notes">
       {% for note in user.notes %}
