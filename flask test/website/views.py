@@ -6,7 +6,6 @@ import json
 
 views = Blueprint('views', __name__)
 
-
 @views.route('/', methods=['GET', 'POST'])
 @login_required
 def home():
@@ -23,8 +22,7 @@ def home():
 
     return render_template("home.html", user=current_user)
 
-
-@views.route('/delete-note', methods=['POST'])
+@views.route('/delete-note', methods=['POST', 'DELETE'])
 def delete_note():  
     note = json.loads(request.data) # this function expects a JSON from the INDEX.js file 
     noteId = note['noteId']
